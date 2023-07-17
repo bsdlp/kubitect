@@ -58,19 +58,20 @@ func (s *OS) SetDefaults() {
 type OSDistro string
 
 const (
-	UBUNTU   OSDistro = "ubuntu"
-	UBUNTU20 OSDistro = "ubuntu20"
-	UBUNTU22 OSDistro = "ubuntu22"
-	DEBIAN   OSDistro = "debian"
-	DEBIAN11 OSDistro = "debian11"
-	CENTOS   OSDistro = "centos"
-	CENTOS9  OSDistro = "centos9"
-	ROCKY    OSDistro = "rocky"
-	ROCKY9   OSDistro = "rocky9"
+	UBUNTU        OSDistro = "ubuntu"
+	UBUNTU20      OSDistro = "ubuntu20"
+	UBUNTU22      OSDistro = "ubuntu22"
+	DEBIAN        OSDistro = "debian"
+	DEBIAN11      OSDistro = "debian11"
+	CENTOS        OSDistro = "centos"
+	CENTOS9       OSDistro = "centos9"
+	ROCKY         OSDistro = "rocky"
+	ROCKY9        OSDistro = "rocky9"
+	FLATCARSTABLE OSDistro = "flatcar-stable"
 )
 
 func (d OSDistro) Validate() error {
-	return v.Var(d, v.OneOf(UBUNTU, UBUNTU20, UBUNTU22, DEBIAN, DEBIAN11, CENTOS, CENTOS9, ROCKY, ROCKY9))
+	return v.Var(d, v.OneOf(UBUNTU, UBUNTU20, UBUNTU22, DEBIAN, DEBIAN11, CENTOS, CENTOS9, ROCKY, ROCKY9, FLATCARSTABLE))
 }
 
 type OSNetworkInterface string

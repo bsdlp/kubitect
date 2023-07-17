@@ -83,4 +83,8 @@ var ProjectOsPresets = map[string]struct {
 		Source:           "https://dl.rockylinux.org/pub/rocky/9/images/x86_64/Rocky-9-GenericCloud-Base-9.2-20230513.0.x86_64.qcow2",
 		NetworkInterface: "eth0",
 	},
+	"flatcar-stable": {
+		Source:           "https://stable.release.flatcar-linux.net/amd64-usr/current/flatcar_production_qemu_image.img.bz2",
+		NetworkInterface: "eth0",
+	},
 }
